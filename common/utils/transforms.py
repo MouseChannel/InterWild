@@ -8,7 +8,7 @@
 
 import torch
 import numpy as np
-from config import cfg
+from main.config import cfg
 from torch.nn import functional as F
 
 def cam2pixel(cam_coord, f, c):
@@ -103,8 +103,10 @@ def restore_bbox(bbox_center, bbox_size, aspect_ratio, extension_ratio):
     if aspect_ratio is not None:
         mask1 = w > (aspect_ratio * h)
         mask2 = w < (aspect_ratio * h)
-        h[mask1] = w[mask1] / aspect_ratio
-        w[mask2] = h[mask2] * aspect_ratio
+        # h[mask1] = w[mask1] / aspect_ratio
+        # w[mask2] = h[mask2] * aspect_ratio
+        h = torch.where(mask1, w / aspect_ratio, h)
+        w = torch.where(mask2, h * aspect_ratio, w)
 
     bbox[:,2] = w*extension_ratio
     bbox[:,3] = h*extension_ratio

@@ -9,10 +9,10 @@
 import numpy as np
 import cv2
 import random
-from config import cfg
+from main.config import cfg
 import math
-from utils.mano import mano
-from utils.transforms import cam2pixel, transform_joint_to_other_db
+from common.utils.mano import mano
+from common.utils.transforms import cam2pixel, transform_joint_to_other_db
 from plyfile import PlyData, PlyElement
 import torch
 

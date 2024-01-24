@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 import math
-from config import cfg
+from main.config import cfg
 
 def make_linear_layers(feat_dims, relu_final=True, use_bn=False):
     layers = []

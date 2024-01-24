@@ -71,7 +71,7 @@ class Config:
 cfg = Config()
 
 sys.path.insert(0, osp.join(cfg.root_dir, 'common'))
-from utils.dir import add_pypath, make_folder
+from common.utils.dir import add_pypath, make_folder
 add_pypath(osp.join(cfg.data_dir))
 for i in range(len(cfg.trainset_3d)):
     add_pypath(osp.join(cfg.data_dir, cfg.trainset_3d[i]))

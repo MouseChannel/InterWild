@@ -22,11 +22,11 @@ import torch.backends.cudnn as cudnn
 sys.path.insert(0, osp.join('..', 'main'))
 sys.path.insert(0, osp.join('..', 'data'))
 sys.path.insert(0, osp.join('..', 'common'))
-from config import cfg
+from main.config import cfg
 from model import get_model
-from utils.preprocessing import load_img, process_bbox, generate_patch_image, get_iou
-from utils.vis import vis_keypoints_with_skeleton, save_obj, render_mesh_orthogonal
-from utils.mano import mano
+from common.utils.preprocessing import load_img, process_bbox, generate_patch_image, get_iou
+from common.utils.vis import vis_keypoints_with_skeleton, save_obj, render_mesh_orthogonal
+from common.utils.mano import mano
 
 def parse_args():
     parser = argparse.ArgumentParser()

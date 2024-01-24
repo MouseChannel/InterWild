@@ -8,7 +8,7 @@
 import torch
 import torch.nn as nn
 from torchvision.models.resnet import BasicBlock, Bottleneck, ResNet18_Weights, ResNet50_Weights
-from config import cfg
+from main.config import cfg
 import os.path as osp
 
 class ResNetBackbone(nn.Module):

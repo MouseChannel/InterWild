@@ -17,7 +17,7 @@ import torchvision.transforms as transforms
 from timer import Timer
 from logger import colorlogger
 from torch.nn.parallel.data_parallel import DataParallel
-from config import cfg
+from main.config import cfg
 from model import get_model
 from dataset import MultipleDatasets
 

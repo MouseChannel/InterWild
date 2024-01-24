@@ -8,16 +8,16 @@
 import os
 import os.path as osp
 import numpy as np
-from config import cfg
+from main.config import cfg
 import copy
 import json
 import cv2
 import torch
 from pycocotools.coco import COCO
-from utils.mano import mano
-from utils.preprocessing import load_img, sanitize_bbox, process_bbox, augmentation, transform_db_data, transform_mano_data, get_mano_data, get_iou
-from utils.transforms import transform_joint_to_other_db
-from utils.vis import vis_keypoints, save_obj
+from common.utils.mano import mano
+from common.utils.preprocessing import load_img, sanitize_bbox, process_bbox, augmentation, transform_db_data, transform_mano_data, get_mano_data, get_iou
+from common.utils.transforms import transform_joint_to_other_db
+from common.utils.vis import vis_keypoints, save_obj
 
 class MSCOCO(torch.utils.data.Dataset):
     def __init__(self, transform, data_split):

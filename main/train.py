@@ -6,7 +6,7 @@
 # 
 
 import argparse
-from config import cfg
+from main.config import cfg
 import torch
 from base import Trainer
 import torch.backends.cudnn as cudnn

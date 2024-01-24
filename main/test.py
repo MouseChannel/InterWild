@@ -10,7 +10,7 @@ import argparse
 from tqdm import tqdm
 import numpy as np
 import torch.backends.cudnn as cudnn
-from config import cfg
+from main.config import cfg
 from base import Tester
 
 def parse_args():

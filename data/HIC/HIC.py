@@ -16,10 +16,10 @@ import math
 import random
 from glob import glob
 from pycocotools.coco import COCO
-from config import cfg
-from utils.mano import mano
-from utils.preprocessing import load_img, get_bbox, process_bbox, augmentation, get_iou, load_ply
-from utils.vis import vis_keypoints, save_obj
+from main.config import cfg
+from common.utils.mano import mano
+from common.utils.preprocessing import load_img, get_bbox, process_bbox, augmentation, get_iou, load_ply
+from common.utils.vis import vis_keypoints, save_obj
 
 class HIC(torch.utils.data.Dataset):
     def __init__(self, transform, data_split):

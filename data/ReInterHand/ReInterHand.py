@@ -16,11 +16,11 @@ import math
 import random
 from glob import glob
 from pycocotools.coco import COCO
-from config import cfg
-from utils.mano import mano
-from utils.preprocessing import load_img, get_bbox, process_bbox, augmentation, transform_db_data, get_mano_data, transform_mano_data, get_iou, distort_projection_fisheye
-from utils.transforms import world2cam, cam2pixel, transform_joint_to_other_db
-from utils.vis import vis_keypoints, save_obj, vis_3d_skeleton
+from main.config import cfg
+from common.utils.mano import mano
+from common.utils.preprocessing import load_img, get_bbox, process_bbox, augmentation, transform_db_data, get_mano_data, transform_mano_data, get_iou, distort_projection_fisheye
+from common.utils.transforms import world2cam, cam2pixel, transform_joint_to_other_db
+from common.utils.vis import vis_keypoints, save_obj, vis_3d_skeleton
 from glob import glob
 
 class ReInterHand(torch.utils.data.Dataset):

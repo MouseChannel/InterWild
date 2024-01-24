@@ -11,7 +11,7 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from config import cfg
+from main.config import cfg
 os.environ["PYOPENGL_PLATFORM"] = "egl"
 import torch
 from pytorch3d.structures import Meshes
