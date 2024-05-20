@@ -47,7 +47,7 @@ class Model(nn.Module):
         else:
             output = self.mano_layer_left(betas=shape, hand_pose=hand_pose, global_orient=root_pose, transl=zero_trans)
       
-        mesh_cam = output
+        mesh_cam = output.vertices
  
         joint_cam = torch.bmm(torch.from_numpy(mano.sh_joint_regressor).cuda()[None, :, :].repeat(batch_size, 1, 1),
                               mesh_cam)
